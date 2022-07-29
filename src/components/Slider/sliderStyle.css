@@ -1,0 +1,112 @@
+input[type='radio'] {
+  position: absolute;
+  top: -5000px;
+  left: -5000px;
+  opacity: 0;
+  z-index: -1000;
+}
+
+/* CONTROL */
+#page1:checked ~ .slider--el-1 {
+  z-index: 10;
+}
+#page1:checked ~ .slider--el-1 .slider--el-bg {
+  transform: scale(0.834);
+}
+#page1:checked ~ .slider--el-1 .slider--el-content {
+  opacity: 1;
+  transition: opacity 0.3s 1.8s;
+}
+#page1:checked ~ .slider--el-1 .part {
+  transform: translateZ(0);
+  opacity: 1;
+}
+
+#page2:checked ~ .slider--el-2 {
+  z-index: 10;
+}
+#page2:checked ~ .slider--el-2 .slider--el-bg {
+  transform: scale(0.834);
+}
+#page2:checked ~ .slider--el-2 .slider--el-content {
+  opacity: 1;
+  transition: opacity 0.3s 1.8s;
+}
+#page2:checked ~ .slider--el-2 .part {
+  transform: translateZ(0);
+  opacity: 1;
+}
+
+#page3:checked ~ .slider--el-3 {
+  z-index: 10;
+}
+#page3:checked ~ .slider--el-3 .slider--el-bg {
+  transform: scale(0.834);
+}
+#page3:checked ~ .slider--el-3 .slider--el-content {
+  opacity: 1;
+  transition: opacity 0.3s 1.8s;
+}
+#page3:checked ~ .slider--el-3 .part {
+  transform: translateZ(10);
+  opacity: 1;
+}
+
+#page4:checked ~ .slider--el-4 {
+  z-index: 10;
+}
+#page4:checked ~ .slider--el-4 .slider--el-bg {
+  transform: scale(0.834);
+}
+#page4:checked ~ .slider--el-4 .slider--el-content {
+  opacity: 1;
+  transition: opacity 0.3s 1.8s;
+}
+#page4:checked ~ .slider--el-4 .part {
+  transform: translateZ(0);
+  opacity: 1;
+}
+
+#page1:checked ~ .slider--control.left .page4-left {
+  z-index: 5000;
+  transform: scale(1);
+  transition: transform 0s 2.1s;
+}
+#page1:checked ~ .slider--control.right .page2-right {
+  z-index: 5000;
+  transform: scale(1);
+  transition: transform 0s 2.1s;
+}
+
+#page2:checked ~ .slider--control.left .page1-left {
+  z-index: 5000;
+  transform: scale(1);
+  transition: transform 0s 2.1s;
+}
+#page2:checked ~ .slider--control.right .page3-right {
+  z-index: 5000;
+  transform: scale(1);
+  transition: transform 0s 2.1s;
+}
+
+#page3:checked ~ .slider--control.left .page2-left {
+  z-index: 5000;
+  transform: scale(1);
+  transition: transform 0s 2.1s;
+}
+#page3:checked ~ .slider--control.right .page4-right {
+  z-index: 5000;
+  transform: scale(1);
+  transition: transform 0s 2.1s;
+}
+
+#page4:checked ~ .slider--control.left .page3-left {
+  z-index: 5000;
+  transform: scale(1);
+  transition: transform 0s 2.1s;
+}
+#page4:checked ~ .slider--control.right .page1-right {
+  z-index: 5000;
+  transform: scale(1);
+  transition: transform 0s 2.1s;
+}
