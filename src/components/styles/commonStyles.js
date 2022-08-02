@@ -21,8 +21,8 @@ export const Container = styled.div`
   }
 `;
 export const Row = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: flex !important;
+  flex-wrap: no-wrap !important;
 `;
 
 export const RowCenter = styled(Row)`
@@ -32,7 +32,7 @@ export const RowCenter = styled(Row)`
 
 export const RowBetween = styled(Row)`
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between !important;
 `;
 
 export const Col = styled.div`
@@ -47,7 +47,7 @@ export const Col12 = styled(Col)`
 
 export const Col6 = styled(Col12)`
   flex: 0 0 100%;
-  max-width: 100%;
+  max-width: 50%;
   @media (min-width: 991px) {
     flex: 0 0 50%;
     max-width: 50%;

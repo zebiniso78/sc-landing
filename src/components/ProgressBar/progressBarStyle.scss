@@ -1,0 +1,101 @@
+$color-black: rgb(13, 13, 13);
+$color-color: rgb(255, 255, 255);
+
+$color-html: #e668b3;
+$color-css: #f78b77;
+$color-text: #343f52;
+
+$porcent-html: 95;
+$porcent-css: 80;
+
+@function strokeDashoffset($num) {
+  @return 440 - (440 * $num) / 100;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container__progressbars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.progressbar__wrapper {
+  margin: 0 20px;
+}
+
+.progressbar {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  transform: rotate(-90deg);
+}
+
+.progressbar__svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.progressbar__svg-circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke-width: 10;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+
+.circle {
+  &-html {
+    animation: anim_circle-html 1s ease-in-out forwards;
+    stroke: $color-html;
+  }
+  &-css {
+    animation: anim_circle-css 1s ease-in-out forwards;
+    stroke: $color-css;
+  }
+}
+
+.progressbar__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: $color-text;
+  font-weight: 500;
+  font-size: 28px;
+  font-family: Urbanist, sans-serif;
+  border-radius: 50px;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.progressbar__title {
+  font-family: Urbanist, sans-serif;
+  font-size: 20px;
+  line-height: 2px;
+  font-weight: 600;
+  color: $color-text;
+  padding: 0;
+  margin: 0;
+  margin-top: 12px;
+}
+
+//  @keyframes
+@keyframes anim_circle-html {
+  to {
+    stroke-dashoffset: strokeDashoffset($porcent-html);
+  }
+}
+
+@keyframes anim_circle-css {
+  to {
+    stroke-dashoffset: strokeDashoffset($porcent-css);
+  }
+}

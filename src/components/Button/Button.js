@@ -1,12 +1,10 @@
 import React from 'react';
-import { MainButton } from './ButtonStyle';
+import { MainButton, MyLinkButton } from './ButtonStyle';
 
-function Button(props) {
+export default function ButtonComp({ onClick, title }) {
   return (
     <>
-      <MainButton >{props.title}</MainButton>
+      <MainButton onClick={onClick}>{title}</MainButton>
     </>
   );
 }
-
-export default Button;

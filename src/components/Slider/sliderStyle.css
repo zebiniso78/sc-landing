@@ -38,7 +38,7 @@ input[type='radio'] {
 }
 
 #page3:checked ~ .slider--el-3 {
-  z-index: 10;
+  z-index: 100;
 }
 #page3:checked ~ .slider--el-3 .slider--el-bg {
   transform: scale(0.834);

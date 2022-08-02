@@ -3,29 +3,23 @@ import styled from 'styled-components';
 export const SliderWrapper = styled.div`
   &.slider {
     // position: relative;
-    height: 100%;
+    height: 100vh;
   }
 
-  .slider--control {
-    z-index: 50;
-    position: absolute;
-    top: calc(50% - 2rem);
-    width: 4rem;
-    height: 4rem;
-    cursor: pointer;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-  }
+  // .slider--control {
+  //   z-index: 50;
+  //   position: absolute;
+  //   top: calc(50% - 2rem);
+  //   width: 4rem;
+  //   height: 4rem;
+  //   cursor: pointer;
+  //   background: rgba(255, 255, 255, 0.5);
+  //   border-radius: 50%;
+  // }
 `;
 
 export const SliderRight = styled.div`
-  &.slider--control.right {
-    right: 4rem;
-    top: 16rem;
-    border: 1px solid red !important;
-  }
-
-  &.slider--control {
+  &.slider-control {
     z-index: 50;
     position: absolute;
     top: calc(50% - 2rem);
@@ -34,6 +28,10 @@ export const SliderRight = styled.div`
     cursor: pointer;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
+  }
+
+  &.slider--control.right {
+    right: 4rem;
   }
 
   label {
@@ -50,13 +48,7 @@ export const SliderRight = styled.div`
 `;
 
 export const SliderLeft = styled.div`
-  & .slider--control.left {
-    left: 4rem;
-    top: 16rem;
-    border: 1px solid red !important;
-  }
-
-  .slider--control {
+  &.slider-control {
     z-index: 50;
     position: absolute;
     top: calc(50% - 2rem);
@@ -65,6 +57,10 @@ export const SliderLeft = styled.div`
     cursor: pointer;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
+  }
+
+  & .slider--control.left {
+    left: 4rem;
   }
 
   label {
@@ -121,13 +117,12 @@ export const SliderFirstElement = styled.div`
     will-change: transform;
   }
 
-  .part {
+  &.slider--el.anim-4parts .part {
     position: absolute;
     width: 50.2%;
     height: 50.2%;
     overflow: hidden;
     will-change: transform;
-    border: 1px solid yellow;
     &::before {
       content: '';
       display: block;
@@ -229,16 +224,13 @@ export const SliderSecondElement = styled.div`
     will-change: transform;
   }
 
-  .part {
+  &slider--el.anim-9parts .part {
     position: absolute;
     width: 33.5%;
     height: 33.5%;
     overflow: hidden;
     will-change: transform;
     transform-origin: 0% 100%;
-    transform: rotateX(90deg);
-    opacity: 1;
-    border: 1px solid green;
 
     &::before {
       content: '';
@@ -358,6 +350,11 @@ export const SliderSecondElement = styled.div`
       left: -200%;
     }
   }
+
+  &.slider--el.anim-9parts .part {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
 `;
 
 export const SliderThirdElement = styled.div`
@@ -401,7 +398,7 @@ export const SliderThirdElement = styled.div`
     will-change: transform;
   }
 
-  .part {
+  &slider--el.anim-5parts .part {
     position: absolute;
     top: 0;
     width: 20.1%;
@@ -519,7 +516,7 @@ export const SliderFourthElement = styled.div`
     will-change: transform;
   }
 
-  .part {
+  &.slider--el.anim-3parts .part {
     position: absolute;
     top: 0;
     width: 33.5%;
